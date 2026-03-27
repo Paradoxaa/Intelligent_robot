@@ -1,0 +1,10 @@
+程序步骤：
+Linux端(Ubuntu 16.04)：
+１．修改ROS主机地址
+２．解压mrobot_ws.zip文件
+３．编译mrobot_ws工作空间
+４．进入~/mrobot_ws/src/mrobot_gazebo/launch$运行mrobot_laser_nav_gazebo.launch文件
+
+Matlab端：
+１．在命令端，输入rosinit("ROS主机IP地址")
+２．运行Mapping_gazebo.m文件

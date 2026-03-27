@@ -1,0 +1,12 @@
+﻿﻿#BNF+IAT 1.0 UTF-8;
+!grammar call;
+
+!slot <action>;
+
+!start <callstart>;
+
+<callstart>:小克<choose>;
+<choose>:<action>|<navigation>|<turn>;
+<action>:前进|后退|停止|过来|休眠;
+<navigation>:去(1|2|3)点;
+<turn>:(左|右)转;

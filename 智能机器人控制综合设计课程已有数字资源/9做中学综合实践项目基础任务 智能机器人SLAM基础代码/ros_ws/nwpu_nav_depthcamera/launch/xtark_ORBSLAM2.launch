@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Bring up Base and Lidar -->
+
+  	<include file="$(find xtark_driver)/launch/xtark_driver.launch"/>
+	<include file="$(find xtark_driver)/launch/xtark_camera.launch"/>
+
+	<node pkg="ORB_SLAM2" type="Mono" name="ORB_SLAM2" output="screen"
+		args="/home/xtark/ros_ws/src/third_packages/ORB_SLAM2/Vocabulary/ORBvoc.txt /home/xtark/ros_ws/src/third_packages/ORB_SLAM2/Examples/RGB-D/astra.yaml">
+	<remap from="/camera/rgb/image_raw" to="/camera/image_raw"/>
+	</node>
+
+
+</launch>

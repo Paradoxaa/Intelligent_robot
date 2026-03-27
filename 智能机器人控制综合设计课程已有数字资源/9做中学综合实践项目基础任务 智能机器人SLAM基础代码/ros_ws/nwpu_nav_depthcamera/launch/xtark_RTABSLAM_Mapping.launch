@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="use_scan" default="false"/>
+	<include file="$(find xtark_nav_depthcamera)/launch/Driver/RTAB_Driver/xtark_bringup_depthcameraRTAB.launch" />
+	<include file="$(find rtabmap_ros)/launch/demo/demo_xtark_mapping.launch" >
+		<arg name="subscribe_scan" value="$(arg use_scan)"/>
+	</include>
+	
+
+</launch>
